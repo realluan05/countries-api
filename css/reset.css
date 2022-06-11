@@ -1,0 +1,29 @@
+* {
+  font-family: var(--f-stack-default);
+  font-size: var(--f-size-default);
+  color: var(--c-text-lm);
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  transition: var(--transition);
+}

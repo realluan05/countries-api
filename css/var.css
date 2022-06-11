@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+:root {
+  --c-blue: hsl(209, 23%, 22%);
+  --bg-blue: hsl(207, 26%, 17%);
+  --c-text-lm:  hsl(200, 15%, 8%);
+  --c-text-input-lm: hsl(0, 0%, 52%);
+  --bg-lm: hsl(0, 0%, 98%);
+  --c-white: hsl(0, 0%, 100%);
+  --f-size-items: 14px;
+  --f-size-default: 16px;
+  --f-stack-default: "Nunito Sans";
+  --transition: .25s;
+}
