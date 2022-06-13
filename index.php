@@ -25,7 +25,7 @@
         <div class="container">
             <section class="dark-mode">
                 <h1>Where in the world?</h1>
-                <button>
+                <button id="dark-theme">
                     Dark Mode
                 </button>
             </section>
