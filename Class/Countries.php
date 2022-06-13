@@ -3,6 +3,7 @@
 class Countries
 {
     private $url;
+    private $country;
 
     public function __construct() {}
 
@@ -11,7 +12,7 @@ class Countries
         $countries = "";
 
         if ($this->getUrl()) {
-            $countries = json_decode(file_get_contents($this->getUrl()));
+            $countries = json_decode(file_get_contents($this->getUrl() . 'all'));
         } else {
             echo "Nenhum URL foi encontrada!";
         }
@@ -32,6 +33,11 @@ class Countries
         return $regions;
     }
 
+    public function getInfoCountry($country)
+    {
+        return json_decode(file_get_contents($this->getCountry() . $country));
+    }
+
     public function setUrl($url)
     {
         $this->url = $url;
@@ -40,6 +46,16 @@ class Countries
     public function getUrl()
     {
         return $this->url;
+    }
+
+    public function setCountry($country)
+    {
+        $this->country = $country;
+    }
+
+    public function getCountry()
+    {
+        return $this->country;
     }
 }
 ?>

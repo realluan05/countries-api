@@ -1,3 +1,85 @@
 @import './var.css';
 @import './reset.css';
 
+.header .dark-mode,
+.search-countries {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .dark-mode {
+  padding: 25px 0;
+}
+
+.header button {
+  font-weight: 600;
+}
+
+.main {
+  background-color: var(--bg-lm);
+  padding: 60px 0;
+}
+
+.search-countries {
+  padding: 0 0 60px;
+}
+
+.countries {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px;
+}
+
+.countries .item {
+  border-radius: 5px;
+  overflow: hidden;
+  filter: drop-shadow(0 2px 4px #f4f4f4);
+  transition: var(--transition);
+}
+
+.countries .item:hover {
+  transform: translateY(-5px);
+  filter: drop-shadow(0 2px 4px #ccc);
+}
+
+.countries .item:hover img {
+  opacity: .85;
+}
+
+.countries .item .content {
+  background-color: var(--c-white);
+  padding: 20px 20px 30px;
+}
+
+.countries .item img {
+  min-height: 160px;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.countries .item h2 {
+  margin: 0 0 15px;
+}
+
+.countries .item ul li strong {
+  font-weight: 600;
+}
+
+.countries .item ul li,
+.countries .item ul li strong {
+  font-size: var(--f-size-items);
+}
+
+.footer .container {
+  text-align: center;
+  padding: 60px 30px;
+}
+
+.social > ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 30px;
+  padding-top: 25px;
+}
