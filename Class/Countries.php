@@ -33,11 +33,6 @@ class Countries
         return $regions;
     }
 
-    public function getInfoCountry($country)
-    {
-        return json_decode(file_get_contents($this->getCountry() . $country));
-    }
-
     public function setUrl($url)
     {
         $this->url = $url;
