@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="./css/style.css" type="text/css" />
 
+    <script src="https://kit.fontawesome.com/2f41b6fafb.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript" defer></script>
     <script src="./js/dark-mode.js" type="text/javascript" defer></script>
 
@@ -69,12 +70,12 @@
 
     <footer class="footer">
         <div class="container">
-            <span>Developed by <strong>Luan Henrique</strong></span>
+            <span class="copyright">Developed by <strong>Luan Henrique</strong></span>
             <nav class="social">
                 <ul>
-                    <li><a href="#">GitHub</a></li>
-                    <li><a href="#">Linkedin</a></li>
-                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="#" title="Linkedin"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    <li><a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
                 </ul>
             </nav>
         </div>

@@ -11,12 +11,9 @@ html.dark .countries .content {
   background-color: var(--c-blue);
 }
 
-html.dark .countries .item {
-  filter: none;
-}
-
+html.dark .countries .item,
 html.dark .countries .item:hover {
-  filter: drop-shadow(0 2px 2px var(--c-blue));
+  filter: none;
 }
 
 html.dark .main {
@@ -51,9 +48,12 @@ html.dark .main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 60px;
+  place-items: flex-start;
 }
 
 .countries .item {
+  display: block;
+  width: 100%;
   border-radius: 5px;
   overflow: hidden;
   filter: drop-shadow(0 2px 4px #f4f4f4);
@@ -80,6 +80,10 @@ html.dark .main {
   margin: 0 0 15px;
 }
 
+.countries .item ul li {
+  margin: 0 0 5px;
+}
+
 .countries .item ul li strong {
   font-weight: 600;
 }
@@ -100,4 +104,8 @@ html.dark .main {
   justify-content: center;
   gap: 0 30px;
   padding-top: 25px;
+}
+
+.copyright, .copyright > strong {
+  font-size: 18px;
 }

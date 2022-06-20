@@ -52,3 +52,16 @@ img {
   display: block;
   max-width: 100%;
 }
+
+i::before {
+  display: inline-block;
+  font-family: "FontAwesome";
+  font-style: normal;
+  font-size: 24px;
+  transition: var(--transition);
+}
+
+i:hover::before {
+  opacity: .8;
+  transform: translateY(-2px);
+}
