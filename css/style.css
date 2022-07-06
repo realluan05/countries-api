@@ -28,10 +28,12 @@
 .countries {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  place-items: flex-start;
   gap: 60px;
 }
 
 .countries .item {
+  width: 100%;
   border-radius: 5px;
   overflow: hidden;
   filter: drop-shadow(var(--drop-shadow));
