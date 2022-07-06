@@ -1,14 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
 
 :root {
-  --c-blue: hsl(209, 23%, 22%);
-  --bg-blue: hsl(207, 26%, 17%);
-  --c-text-lm:  hsl(200, 15%, 8%);
-  --c-text-input-lm: hsl(0, 0%, 52%);
-  --bg-lm: hsl(0, 0%, 98%);
+  --c-text: hsl(200, 15%, 8%);
+  --c-text-input: hsl(0, 0%, 52%);
+  --bg-primary: hsl(0, 0%, 98%);
+  --bg-secondary: hsl(0, 0%, 100%);
   --c-white: hsl(0, 0%, 100%);
+  --c-text-black: hsl(200, 15%, 8%);
   --f-size-items: 14px;
   --f-size-default: 16px;
   --f-stack-default: "Nunito Sans";
+  --drop-shadow: 0 2px 4px #f4f4f4;
+  --drop-shadow-hover: 0 2px 4px #ccc;
   --transition: .25s;
+}
+
+.night-mode:root {
+  --c-text: hsl(0, 0%, 100%);
+  --c-text-input: hsl(0, 0%, 100%);
+  --bg-primary: hsl(207, 26%, 17%);
+  --bg-secondary: hsl(209, 23%, 22%);
+  --drop-shadow: 0 2px 4px transparent;
+  --drop-shadow-hover: 0 2px 4px transparent;
 }

@@ -1,7 +1,7 @@
 * {
   font-family: var(--f-stack-default);
   font-size: var(--f-size-default);
-  color: var(--c-text-lm);
+  color: var(--c-text);
   box-sizing: border-box;
 }
 
@@ -51,4 +51,18 @@ figure {
 img {
   display: block;
   max-width: 100%;
+}
+
+.header,
+.footer,
+input,
+select {
+  background-color: var(--bg-secondary);
+}
+
+input,
+input::placeholder,
+input:focus,
+select {
+  color: var(--c-text-input);
 }

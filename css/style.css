@@ -1,28 +1,6 @@
 @import './var.css';
 @import './reset.css';
 
-html.dark * {
-  color: var(--c-white);
-}
-
-html.dark .header,
-html.dark .footer,
-html.dark .countries .content {
-  background-color: var(--c-blue);
-}
-
-html.dark .countries .item {
-  filter: none;
-}
-
-html.dark .countries .item:hover {
-  filter: drop-shadow(0 2px 2px var(--c-blue));
-}
-
-html.dark .main {
-  background-color: var(--bg-blue);
-}
-
 .header .dark-mode,
 .search-countries {
   display: flex;
@@ -39,7 +17,7 @@ html.dark .main {
 }
 
 .main {
-  background-color: var(--bg-lm);
+  background-color: var(--bg-primary);
   padding: 60px 0;
 }
 
@@ -56,13 +34,13 @@ html.dark .main {
 .countries .item {
   border-radius: 5px;
   overflow: hidden;
-  filter: drop-shadow(0 2px 4px #f4f4f4);
+  filter: drop-shadow(var(--drop-shadow));
   transition: var(--transition);
 }
 
 .countries .item:hover {
   transform: translateY(-5px);
-  filter: drop-shadow(0 2px 4px #ccc);
+  filter: drop-shadow(var(--drop-shadow-hover));
 }
 
 .countries .item .content {
@@ -78,6 +56,7 @@ html.dark .main {
 
 .countries .item h2 {
   margin: 0 0 15px;
+  color: var(--c-text-black);
 }
 
 .countries .item ul li strong {
@@ -87,11 +66,13 @@ html.dark .main {
 .countries .item ul li,
 .countries .item ul li strong {
   font-size: var(--f-size-items);
+  color: var(--c-text-black);
 }
 
 .footer .container {
   text-align: center;
   padding: 60px 30px;
+  color: var(--c-text-black);
 }
 
 .social > ul {

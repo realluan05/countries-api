@@ -8,7 +8,9 @@
 
     <link rel="stylesheet" href="./css/style.css" type="text/css" />
 
+    <!--
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript" defer></script>
+    -->
     <script src="./js/dark-mode.js" type="text/javascript" defer></script>
 
     <title>REST Countries API</title>
@@ -27,9 +29,8 @@
         <div class="container">
             <section class="dark-mode">
                 <h1>Where in the world?</h1>
-                <button id="dark-theme">
-                    Dark Mode
-                </button>
+
+                <input id="night-mode" class="lamp" type="checkbox" aria-label="night-mode" />
             </section>
         </div>
     </header>
