@@ -8,11 +8,7 @@
 
     <link rel="stylesheet" href="./css/style.css" type="text/css" />
 
-<<<<<<< HEAD
     <!--
-=======
-    <script src="https://kit.fontawesome.com/2f41b6fafb.js" crossorigin="anonymous"></script>
->>>>>>> 11dcb6fc1321507cf9f0f721649ee1e3a100b30d
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript" defer></script>
     -->
     <script src="./js/dark-mode.js" type="text/javascript" defer></script>
