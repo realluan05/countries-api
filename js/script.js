@@ -1,8 +1,23 @@
-// jQuery(function () {
-//     $('#dark-theme').click(function () {
-//         $('html').toggleClass('dark');
-//     });
-// });
+jQuery(function () {
+  $('.to-top').click(function () {
+    $('html, body').animate({ scrollTop: 0 }, 'slow');
+  });
+
+  $('#search').on('input keyup', function(){
+    filtrar();
+  });
+
+  function filtrar() {
+    var termo = $('#search').val().toUpperCase();
+    $('#list-countries > li').each(function () {
+      if ($(this).html().toUpperCase().indexOf(termo) === -1) {
+        $(this).hide();
+      } else {
+        $(this).show();
+      }
+    });
+  }
+});
 
 // pegar o valor no localStorage
 const nightModeStorage = localStorage.getItem('gmtNightMode')
@@ -30,4 +45,4 @@ nightMode.addEventListener('click', () => {
   }
   // senão remove
   localStorage.removeItem('gmtNightMode')
-})
+});

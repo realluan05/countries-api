@@ -12,8 +12,25 @@
   padding: 25px 0;
 }
 
-.header button {
+.btn-dark-mode {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+}
+
+.btn-dark-mode i {
+  display: inline-block;
+  transform: rotate(-20deg);
+}
+
+.btn-dark-mode input {
+  display: none;
+}
+
+.header .btn-dark-mode label {
   font-weight: 600;
+  cursor: pointer;
 }
 
 .main {
@@ -25,14 +42,14 @@
   padding: 0 0 60px;
 }
 
-.countries {
+#list-countries {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   place-items: flex-start;
   gap: 60px;
 }
 
-.countries .item {
+#list-countries .item {
   width: 100%;
   border-radius: 5px;
   overflow: hidden;
@@ -40,35 +57,39 @@
   transition: var(--transition);
 }
 
-.countries .item:hover {
+#list-countries .item:hover {
   transform: translateY(-5px);
   filter: drop-shadow(var(--drop-shadow-hover));
 }
 
-.countries .item .content {
+#list-countries .item .content {
   background-color: var(--c-white);
   padding: 20px 20px 30px;
 }
 
-.countries .item img {
+#list-countries .item img {
   height: 160px;
   width: 100%;
   object-fit: cover;
 }
 
-.countries .item h2 {
+#list-countries .item h2 {
   margin: 0 0 15px;
   color: var(--c-text-black);
 }
 
-.countries .item ul li strong {
+#list-countries .item ul li strong {
   font-weight: 600;
 }
 
-.countries .item ul li,
-.countries .item ul li strong {
+#list-countries .item ul li,
+#list-countries .item ul li strong {
   font-size: var(--f-size-items);
   color: var(--c-text-black);
+}
+
+.footer {
+  position: relative;
 }
 
 .footer .container {
@@ -82,5 +103,20 @@
   align-items: center;
   justify-content: center;
   gap: 0 30px;
-  padding-top: 25px;
+  padding: 25px 0;
+}
+
+.to-top {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  background-color: var(--bg-primary);
+  filter: drop-shadow(var(--drop-shadow));
+  transition: var(--transition);
+}
+
+.to-top:hover {
+  filter: drop-shadow(var(--drop-shadow-hover));
+  transform: translateY(-3px);
 }
