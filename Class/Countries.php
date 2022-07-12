@@ -24,7 +24,7 @@ class Countries
     {
         $regions = [
             "africa" => "Africa",
-            "am" => "America",
+            "america" => "America",
             "asia" => "Asia",
             "europe" => "Europe",
             "oceania" => "Oceania",

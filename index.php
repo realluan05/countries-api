@@ -46,7 +46,7 @@
                 </div>
 
                 <select name="filter" id="filter">
-                    <option disabled selected>Filter by Region</option>
+                    <option value="-1" disabled selected>Filter by Region</option>
                     <?php foreach($regions as $code => $region) { ?>
                         <option value="<?= $code ?>"><?= $region ?></option>
                     <?php } ?>
@@ -62,11 +62,11 @@
                                     <img src="<?= $value->flags->png ?>" alt="<?= $value->name->common ?>" loading="lazy" />
                                 </figure>
                                 <div class="content">
-                                    <h2><?= $value->name->common ?></h2>
+                                    <strong class="name"><?= $value->name->common ?></strong>
                                     <ul>
-                                        <li><strong>Population: </strong><?= number_format($value->population) ?></li>
-                                        <li><strong>Region: </strong><?= $value->region ?></li>
-                                        <li><strong>Capital: </strong><?= $value->capital[0] ?></li>
+                                        <li><p><strong>Population: </strong><?= number_format($value->population) ?></p></li>
+                                        <li><p><strong>Region: </strong><?= $value->region ?></p></li>
+                                        <li><p><strong>Capital: </strong><?= $value->capital[0] ?></p></li>
                                     </ul>
                                 </div>
                             </a>
@@ -79,6 +79,7 @@
 
     <footer class="footer">
         <div class="container">
+            <button class="to-top"><i class="fa-solid fa-angle-up"></i></button>
             <span class="copyright">Developed by <strong>Luan Henrique</strong></span>
             <nav class="social">
                 <ul>
@@ -87,7 +88,6 @@
                     <li><a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
                 </ul>
             </nav>
-            <button class="to-top"><i class="fa-solid fa-angle-up"></i></button>
         </div>
     </footer>
 </body>
