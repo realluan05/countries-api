@@ -27,9 +27,7 @@ $country = json_decode(file_get_contents($endpoint));
 
     <main class="main">
         <div class="container">
-            <a href="../index.php" class="button">
-                Back
-            </a>
+            <a href="../index.php" class="button">Back</a>
 
             <section class="wrapper-country">
                 <div class="image-country">
@@ -40,32 +38,48 @@ $country = json_decode(file_get_contents($endpoint));
                 <div class="info-country">
                     <h1><?= $c->name->common ?></h1>
 
-                    <ul class="list">
-                        <?php foreach($c->name->nativeName as $native) { ?>
-                            <li>
-                                <p><strong>Native Name: </strong> <?= $native->common ?></p>
-                            </li>
-                            <?php break; ?>
-                        <?php } ?>
-                        <li><p><strong>Population: </strong><?= number_format($c->population) ?></p></li>
-                        <li><p><strong>Region: </strong><?= $c->region ?></p></li>
-                        <li><p><strong>Sub Region: </strong><?= $c->subregion ?></p></li>
-                        <li><p><strong>Capital: </strong><?= $c->capital[0] ?></p></li>
-                        <li><p><strong>Top Level Domain: </strong><?= $c->tld[0] ?></p></li>
-                        <?php foreach($c->currencies as $currency) { ?>
-                            <li>
-                                <p><strong>Currencies: </strong> <?= $currency->name ?></p>
-                            </li>
-                        <?php } ?>
-                        <li>
-                            <p>
-                                <strong>Languages: </strong>
-                                <?php foreach($c->languages as $idx => $lang) {
-                                    echo $lang . ', ';
-                                } ?>
-                            </p>
-                        </li>
-                    </ul>
+                    <div class="wrapper-info">
+                        <div class="left">
+                            <div class="item">
+                                <?php foreach($c->name->nativeName as $native) { ?>
+                                    <p><strong>Native Name: </strong> <?= $native->common ?></p>
+                                    <?php break; ?>
+                                <?php } ?>
+                            </div>
+                            <div class="item">
+                                <p><strong>Population: </strong><?= number_format($c->population) ?></p>
+                            </div>
+                            <div class="item">
+                                <p><strong>Region: </strong><?= $c->region ?></p>
+                            </div>
+                            <div class="item">
+                                <p><strong>Sub Region: </strong><?= $c->subregion ?></p>
+                            </div>
+                            <div class="item">
+                                <p><strong>Capital: </strong><?= $c->capital[0] ?></p>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="item">
+                                <p><strong>Top Level Domain: </strong><?= $c->tld[0] ?></p></li>
+                            </div>
+                            <div class="item">
+                                <?php foreach($c->currencies as $currency) { ?>
+                                    <p><strong>Currencies: </strong> <?= $currency->name ?></p>
+                                <?php } ?>
+                            </div>
+                            <div class="item">
+                                <p>
+                                    <strong>Languages: </strong>
+                                    <?php foreach($c->languages as $idx => $lang) {
+                                        $string .= $lang . ', ';
+                                    }
+                                    echo rtrim($string, ', ');
+                                    ?>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="border-countries">
                         <strong>Border Countries:</strong>
