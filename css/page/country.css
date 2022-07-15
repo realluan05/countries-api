@@ -49,10 +49,6 @@ a.button::before {
   gap: 0 100px;
 }
 
-.info-country {
-  padding: 30px 0;
-}
-
 .info-country > h1 {
   margin: 0;
   font-size: 34px;
