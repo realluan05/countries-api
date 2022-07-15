@@ -29,3 +29,9 @@
   font-weight: 600;
   cursor: pointer;
 }
+
+@media (max-width: 770px) {
+  .dark-mode>h1 {
+    font-size: 18px;
+  }
+}
