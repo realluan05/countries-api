@@ -45,7 +45,7 @@ a.button::before {
 
 .wrapper-country {
   display: grid;
-  grid-template-columns: 425px 1fr;
+  grid-template-columns: 450px 1fr;
   gap: 0 100px;
 }
 
