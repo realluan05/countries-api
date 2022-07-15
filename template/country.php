@@ -15,7 +15,9 @@ $country = json_decode(file_get_contents($endpoint));
 
     <script src="https://kit.fontawesome.com/2f41b6fafb.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript" defer></script>
-    <script src="../js/script.js" type="text/javascript" defer></script>
+    <script src="../js/geral.js" type="text/javascript" defer></script>
+    <script src="../js/dark-mode.js" type="text/javascript" defer></script>
+    <script src="../js/filters.js" type="text/javascript" defer></script>
 
     <title><?= $c->name->common ?></title>
 </head>
