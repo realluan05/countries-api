@@ -1,0 +1,33 @@
+.footer {
+  position: relative;
+}
+
+.footer .container {
+  text-align: center;
+  padding: 60px 30px;
+  color: var(--c-text-black);
+}
+
+.social>ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 30px;
+  padding: 25px 0 0;
+}
+
+.to-top {
+  display: block;
+  margin: 0 auto 30px;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  background-color: var(--bg-primary);
+  filter: drop-shadow(var(--drop-shadow));
+  transition: var(--transition);
+}
+
+.to-top:hover {
+  filter: drop-shadow(var(--drop-shadow-hover));
+  transform: translateY(-3px);
+}

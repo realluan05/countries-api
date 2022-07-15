@@ -1,0 +1,31 @@
+.header .dark-mode,
+.search-countries {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .dark-mode {
+  padding: 25px 0;
+}
+
+.btn-dark-mode {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+}
+
+.btn-dark-mode i {
+  display: inline-block;
+  transform: rotate(-20deg);
+}
+
+.btn-dark-mode input {
+  display: none;
+}
+
+.header .btn-dark-mode label {
+  font-weight: 600;
+  cursor: pointer;
+}
