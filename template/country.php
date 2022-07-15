@@ -81,17 +81,18 @@ $country = json_decode(file_get_contents($endpoint));
                         </div>
                     </div>
 
-                    <div class="border-countries">
-                        <strong>Border Countries:</strong>
-
-                        <ul>
-                            <?php foreach($c->borders as $border) { ?>
-                                <li>
-                                    <span><?= $border ?></span>
-                                </li>
-                            <?php } ?>
-                        </ul>
-                    </div>
+                    <?php if (count($c->borders) > 0 ) { ?>
+                        <div class="border-countries">
+                            <strong>Border Countries:</strong>
+                            <ul>
+                                <?php foreach($c->borders as $border) { ?>
+                                    <li>
+                                        <span><?= $border ?></span>
+                                    </li>
+                                <?php } ?>
+                            </ul>
+                        </div>
+                    <?php } ?>
                 </div>
             </sec>
         </div>
