@@ -1,8 +1,5 @@
 jQuery(function () {
-  $('.to-top').click(function () {
-    $('html, body').animate({ scrollTop: 0 }, 'slow');
-  });
-
+  /* Filtros */
   $('#search').on('input keyup', function () {
     filtrar($(this));
   });
@@ -29,6 +26,7 @@ jQuery(function () {
     });
   }
 
+  /* Dark Mode */
   // pegar o valor no localStorage
   const nightModeStorage = localStorage.getItem('gmtNightMode');
   const nightMode = $('#night-mode');
@@ -55,5 +53,10 @@ jQuery(function () {
     }
     // senão remove
     localStorage.removeItem('gmtNightMode');
+  });
+
+  /* Botão de voltar ao topo */
+  $('.to-top').click(function () {
+    $('html, body').animate({ scrollTop: 0 }, 'slow');
   });
 });

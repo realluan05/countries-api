@@ -79,11 +79,23 @@ select {
 
 input {
   width: 100%;
+  background: url('../assets/images/icon-search-l.svg') no-repeat 25px center var(--bg-secondary);
+  padding-left: 65px;
+}
+
+.night-mode input {
+  background: url('../assets/images/icon-search-d.svg') no-repeat 25px center var(--bg-secondary);
 }
 
 select {
   width: 100%;
   max-width: 175px;
+  -webkit-appearance: none;
+  background: url('../assets/images/arrow-down-l.svg') no-repeat calc(100% - 15px) center var(--bg-secondary);
+}
+
+.night-mode select {
+  background: url('../assets/images/arrow-down-d.svg') no-repeat calc(100% - 15px) center var(--bg-secondary);
 }
 
 i::before {
