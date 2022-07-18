@@ -18,8 +18,8 @@
     <title>REST Countries API</title>
 </head>
 <body>
-    <?php require_once './template/header.php' ?>
-    <?php require_once './template/main.php' ?>
-    <?php require_once './template/footer.php' ?>
+    <?php require_once './api/header.php' ?>
+    <?php require_once './api/main.php' ?>
+    <?php require_once './api/footer.php' ?>
 </body>
 </html>
