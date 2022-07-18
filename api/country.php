@@ -23,11 +23,11 @@ $country = json_decode(file_get_contents($endpoint));
     <title><?= $c->name->common ?></title>
 </head>
 <body>
-    <?php require_once './header.php' ?>
+    <?php require_once 'header.php' ?>
 
     <main class="main">
         <div class="container">
-            <a href="./index.php" class="button">Back</a>
+            <a href="index.php" class="button">Back</a>
 
             <section class="wrapper-country">
                 <div class="image-country">
@@ -98,7 +98,7 @@ $country = json_decode(file_get_contents($endpoint));
         </div>
     </main>
 
-    <?php require_once './footer.php' ?>
+    <?php require_once 'footer.php' ?>
 </body>
 </html>
 <?php endforeach; ?>
