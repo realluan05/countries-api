@@ -84,7 +84,7 @@ $country = json_decode(file_get_contents($endpoint));
                         </div>
                     </div>
 
-                    <?php if (count($c->borders) > 0) { ?>
+                    <?php if (is_array($c->borders)) { ?>
                         <div class="border-countries">
                             <strong>Border Countries:</strong>
                             <ul>
