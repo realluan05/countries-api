@@ -71,7 +71,10 @@ $country = json_decode(file_get_contents($endpoint));
                             <div class="item">
                                 <p>
                                     <strong>Languages: </strong>
-                                    <?php foreach($c->languages as $idx => $lang) {
+                                    <?php
+                                    $string = "";
+
+                                    foreach($c->languages as $idx => $lang) {
                                         $string .= $lang . ', ';
                                     }
                                     echo rtrim($string, ', ');
@@ -81,7 +84,7 @@ $country = json_decode(file_get_contents($endpoint));
                         </div>
                     </div>
 
-                    <?php if (count($c->borders) > 0 ) { ?>
+                    <?php if ($c->borders) { ?>
                         <div class="border-countries">
                             <strong>Border Countries:</strong>
                             <ul>
