@@ -1,5 +1,5 @@
 <?php
-require '../Class/Countries.php';
+require 'Class/Countries.php';
 
 $c = new Countries();
 
