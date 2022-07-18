@@ -1,5 +1,3 @@
-<?php require '../Class/Countries.php'; ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

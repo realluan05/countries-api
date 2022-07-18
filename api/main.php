@@ -1,4 +1,6 @@
 <?php
+require '../Class/Countries.php';
+
 $c = new Countries();
 
 $c->setUrl('https://restcountries.com/v3.1/');
