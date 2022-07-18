@@ -28,7 +28,7 @@ $regions = $c->getRegions();
             <ul id="list-countries">
                 <?php foreach($countries as $key => $value) { ?>
                     <li class="item" id="n-produto-<?= $key ?>">
-                        <a href="./country.php?ccn3=<?= $value->ccn3 ?>">
+                        <a href="country.php?ccn3=<?= $value->ccn3 ?>">
                             <figure>
                                 <img src="<?= $value->flags->png ?>" alt="<?= $value->name->common ?>" loading="lazy" />
                             </figure>
