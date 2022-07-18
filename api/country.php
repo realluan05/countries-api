@@ -84,11 +84,14 @@ $country = json_decode(file_get_contents($endpoint));
                         </div>
                     </div>
 
-                    <?php if (is_array($c->borders)) { ?>
+                    <?php
+                    $borders = $c->borders;
+
+                    if (count($borders) > 0) { ?>
                         <div class="border-countries">
                             <strong>Border Countries:</strong>
                             <ul>
-                                <?php foreach($c->borders as $border) { ?>
+                                <?php foreach($borders as $border) { ?>
                                     <li>
                                         <span><?= $border ?></span>
                                     </li>
