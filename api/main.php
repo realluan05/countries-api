@@ -35,9 +35,9 @@ $regions = $c->getRegions();
                             <div class="content">
                                 <strong class="name"><?= $value->name->common ?></strong>
                                 <ul>
-                                    <li><p><strong>Population: </strong><?= number_format($value->population) ?></p></li>
-                                    <li><p><strong>Region: </strong><?= $value->region ?></p></li>
-                                    <li><p><strong>Capital: </strong><?= $value->capital[0] ?></p></li>
+                                    <?= isset($value->population) ? '<li><p><strong>Population: </strong>'. number_format($value->population) .'</p></li>' : '' ?>
+                                    <?= isset($value->region) ? '<li><p><strong>Region: </strong>'. $value->region .'</p></li>' : '' ?>
+                                    <?= isset($value->capital[0]) ? '<li><p><strong>Capital: </strong>'. $value->capital[0] .'</p></li>' : '' ?>
                                 </ul>
                             </div>
                         </a>

@@ -50,13 +50,13 @@ $country = json_decode(file_get_contents($endpoint));
                                 <p><strong>Population: </strong><?= number_format($c->population) ?></p>
                             </div>
                             <div class="item">
-                                <p><strong>Region: </strong><?= $c->region ?></p>
+                                <?= isset($c->region) ? '<p><strong>Region: </strong>'. $c->region .'</p>' : '' ?>
                             </div>
                             <div class="item">
-                                <p><strong>Sub Region: </strong><?= $c->subregion ?></p>
+                                <?= isset($c->subregion) ? '<p><strong>Sub Region: </strong>'. $c->subregion .'</p>' : '' ?>
                             </div>
                             <div class="item">
-                                <p><strong>Capital: </strong><?= $c->capital[0] ?></p>
+                                <?= isset($c->captial[0]) ? '<p><strong>Capital: </strong>'. $c->capital[0] .'</p>' : '' ?>
                             </div>
                         </div>
                         <div class="right">
@@ -68,19 +68,21 @@ $country = json_decode(file_get_contents($endpoint));
                                     <p><strong>Currencies: </strong> <?= $currency->name ?></p>
                                 <?php } ?>
                             </div>
-                            <div class="item">
-                                <p>
-                                    <strong>Languages: </strong>
-                                    <?php
-                                    $string = "";
+                            <?php if (isset($c->languages)) { ?>
+                                <div class="item">
+                                    <p>
+                                        <strong>Languages: </strong>
+                                        <?php
+                                        $string = "";
 
-                                    foreach($c->languages as $idx => $lang) {
-                                        $string .= $lang . ', ';
-                                    }
-                                    echo rtrim($string, ', ');
-                                    ?>
-                                </p>
-                            </div>
+                                        foreach($c->languages as $idx => $lang) {
+                                            $string .= $lang . ', ';
+                                        }
+                                        echo rtrim($string, ', ');
+                                        ?>
+                                    </p>
+                                </div>
+                            <?php } ?>
                         </div>
                     </div>
 
