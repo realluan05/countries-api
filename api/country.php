@@ -40,12 +40,14 @@ $country = json_decode(file_get_contents($endpoint));
 
                     <div class="wrapper-info">
                         <div class="left">
+                            <?php if ($c->name->nativeName) { ?>
                             <div class="item">
                                 <?php foreach($c->name->nativeName as $native) { ?>
                                     <p><strong>Native Name: </strong> <?= $native->common ?></p>
                                     <?php break; ?>
                                 <?php } ?>
                             </div>
+                            <?php } ?>
                             <div class="item">
                                 <p><strong>Population: </strong><?= number_format($c->population) ?></p>
                             </div>
@@ -63,11 +65,13 @@ $country = json_decode(file_get_contents($endpoint));
                             <div class="item">
                                 <p><strong>Top Level Domain: </strong><?= $c->tld[0] ?></p></li>
                             </div>
-                            <div class="item">
-                                <?php foreach($c->currencies as $currency) { ?>
-                                    <p><strong>Currencies: </strong> <?= $currency->name ?></p>
-                                <?php } ?>
-                            </div>
+                            <?php if ($c->currencies) { ?>
+                                <div class="item">
+                                    <?php foreach($c->currencies as $currency) { ?>
+                                        <p><strong>Currencies: </strong> <?= $currency->name ?></p>
+                                    <?php } ?>
+                                </div>
+                            <?php } ?>
                             <?php if (isset($c->languages)) { ?>
                                 <div class="item">
                                     <p>
@@ -75,7 +79,7 @@ $country = json_decode(file_get_contents($endpoint));
                                         <?php
                                         $string = "";
 
-                                        foreach($c->languages as $idx => $lang) {
+                                        foreach($c->languages as $lang) {
                                             $string .= $lang . ', ';
                                         }
                                         echo rtrim($string, ', ');
