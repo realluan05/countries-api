@@ -40,7 +40,7 @@ $country = json_decode(file_get_contents($endpoint));
 
                     <div class="wrapper-info">
                         <div class="left">
-                            <?php if ($c->name->nativeName) { ?>
+                            <?php if (isset($c->name->nativeName)) { ?>
                             <div class="item">
                                 <?php foreach($c->name->nativeName as $native) { ?>
                                     <p><strong>Native Name: </strong> <?= $native->common ?></p>
@@ -65,7 +65,7 @@ $country = json_decode(file_get_contents($endpoint));
                             <div class="item">
                                 <p><strong>Top Level Domain: </strong><?= $c->tld[0] ?></p></li>
                             </div>
-                            <?php if ($c->currencies) { ?>
+                            <?php if (isset($c->currencies)) { ?>
                                 <div class="item">
                                     <?php foreach($c->currencies as $currency) { ?>
                                         <p><strong>Currencies: </strong> <?= $currency->name ?></p>
